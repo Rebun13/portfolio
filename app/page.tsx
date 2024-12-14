@@ -25,7 +25,7 @@ function Slide({ title, content, image }: { title: string, content: string[], im
   return (
     <section>
       <div ref={ref}>
-        {content.map((paragraph) => <p>{paragraph}</p>)}
+        {content.map((paragraph, index) => <p key={`${title.replace(/\s/g, "")}-${index}`}>{paragraph}</p>)}
       </div>
       <motion.h2 style={{ y }}>{title}</motion.h2>
       <motion.img src={image} />
