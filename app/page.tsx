@@ -11,7 +11,6 @@ import {
 
 import slide1 from "@/app/slides/1.json"
 import slide2 from "@/app/slides/2.json"
-import { list } from "postcss";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
