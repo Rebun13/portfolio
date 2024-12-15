@@ -133,7 +133,7 @@ section > div {
   margin: 20px;
   background: var(--white);
   overflow: hidden;
-  background: var(--accent);
+  background-color: var(--accent);
   padding: 10px 20px;
 }
 
@@ -146,6 +146,8 @@ section > h2 {
   letter-spacing: -3px;
   line-height: 1.2;
   position: absolute;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 section > img {

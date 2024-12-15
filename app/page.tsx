@@ -16,7 +16,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Slide({ title, content, image }: { title: string, content: string[], image: string }) {
+function Slide({ title, content }: { title: string, content: string[] }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
@@ -26,7 +26,6 @@ function Slide({ title, content, image }: { title: string, content: string[], im
       <div ref={ref}>
         {content.map((paragraph, index) => <p key={`${title.replace(/\s/g, "")}-${index}`} className="slide-text">{paragraph}</p>)}
       </div>
-      <motion.img style={{y}} src={`/portfolio/${image}`}/>
       <motion.h2 style={{ y }}>{title}</motion.h2>
     </section>
   );
@@ -47,7 +46,7 @@ export default function Home() {
   return (
     <>
       {slides.map((slide) => (
-        <Slide title={slide.title} content={slide.content} image={slide.image} key={slide.title} />
+        <Slide title={slide.title} content={slide.content} key={slide.title} />
       ))}
       <motion.div className="progress" style={{ scaleX }} />
     </>
