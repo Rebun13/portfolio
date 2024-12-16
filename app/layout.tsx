@@ -1,16 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "@/app/globals.css";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
-const accentFont = localFont({
-  src: "./fonts/Mulish.ttf",
-  weight: "700",
-});
-const primaryFont = localFont({
-  src: "./fonts/SpaceMono.ttf",
-  weight: "400",
-});
+import { primaryFont } from "./fonts/fonts";
 
 export const metadata: Metadata = {
   title: "Ruben Gomez Dopazo",
@@ -25,8 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${accentFont.className} ${primaryFont.className} antialiased`}
+        className={`${primaryFont.className} antialiased`}
       >
+        <Navbar />
         {children}
         <Footer title="Rubén Gómez Dopazo @ 2024" />
       </body>

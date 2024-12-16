@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { useRef } from "react";
+import { useRef } from "react"
 import {
   motion, useScroll,
   useSpring,
@@ -16,7 +16,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Slide({ title, content }: { title: string, content: string[] }) {
+function Slide({ title, content }: Readonly<{ title: string, content: string[] }>) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
