@@ -11,6 +11,7 @@ interface Element {
 }
 
 export function Navbar(){
+    const pathname = usePathname()
     const links: Element[] = [
         {
             "label": "About me",
@@ -33,9 +34,9 @@ export function Navbar(){
                     <Link href={link.path} key={link.label}>
                         <motion.h3
                             whileHover={{scale: 1.2, color: "#00666b"}}
-                            className={usePathname()==link.path ? "active" : ""}
+                            className={pathname==link.path ? "active" : ""}
                         >
-                            {usePathname()==link.path ? `> ${link.label} <` : link.label}
+                            {pathname==link.path ? `> ${link.label} <` : link.label}
                         </motion.h3>
                     </Link>
                 )
