@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-import { accentFont } from "@/app/fonts/fonts"
+import { accentFont } from "@/components/fonts/fonts"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 

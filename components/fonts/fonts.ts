@@ -8,5 +8,5 @@ export const accentFont = localFont({
 export const primaryFont = localFont({
     src: "./SpaceMono.ttf",
     weight: "400",
-  });
+});
   

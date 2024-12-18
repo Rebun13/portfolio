@@ -8,23 +8,24 @@ import {
   useTransform,
   MotionValue
 } from "motion/react"
+import Markdown from 'react-markdown'
 
-import slide1 from "@/app/slides/1.json"
-import slide2 from "@/app/slides/2.json"
+import slide1 from "@/components/slides/1.json"
+import slide2 from "@/components/slides/2.json"
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
 function Slide({ title, content }: Readonly<{ title: string, content: string[] }>) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 300);
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({ target: ref })
+  const y = useParallax(scrollYProgress, 300)
 
   return (
     <section>
       <div ref={ref}>
-        {content.map((paragraph, index) => <p key={`${title.replace(/\s/g, "")}-${index}`} className="slide-text">{paragraph}</p>)}
+        {content.map((paragraph, index) => <div key={`${title.replace(/\s/g, "")}-${index}`} className="slide-text"><Markdown >{paragraph}</Markdown ></div>)}
       </div>
       <motion.h2 style={{ y }}>{title}</motion.h2>
     </section>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { primaryFont } from "./fonts/fonts";
+import { primaryFont } from "../components/fonts/fonts";
 
 export const metadata: Metadata = {
   title: "Ruben Gomez Dopazo",
