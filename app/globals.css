@@ -63,9 +63,9 @@ header {
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0) 1px,
-    var(--background) 1px
+  background-image: radial-gradient(
+    var(--background) 2px,
+    rgba(0, 0, 0, 0) 2px
   );
   background-size: 4px 4px;
   backdrop-filter: blur(3px);
@@ -79,6 +79,10 @@ header {
 header h3 {
   margin: 0 20px;
   font-weight: bold;
+}
+
+header h3.active {
+  color: var(--accent);
 }
 
 header::after {
@@ -102,9 +106,9 @@ footer {
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 0) 1px,
-    var(--background) 1px
+  background-image: radial-gradient(
+    var(--background) 2px,
+    rgba(0, 0, 0, 0) 2px
   );
   background-size: 4px 4px;
   backdrop-filter: blur(3px);
@@ -150,6 +154,22 @@ code {
 html {
   scroll-snap-type: y mandatory;
 }
+
+.wallpaper{
+  background-image: url("/portfolio/tile.jpg");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  opacity: .1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 /*
 h1 {
   font-size: 56px;
@@ -172,7 +192,7 @@ section {
 
 section > div {
   width: 600px;
-  height: 450px;
+  height: 465px;
   position: relative;
   max-height: 90vh;
   margin: 20px;
@@ -237,7 +257,9 @@ section > img {
   position: fixed;
   left: 0;
   right: 0;
-  height: 5px;
-  background: var(--main);
-  bottom: 100px;
+  height: 10px;
+  background: var(--accent);
+  bottom: 0;
+  z-index: 300;
+  transform-origin: 0%;
 }

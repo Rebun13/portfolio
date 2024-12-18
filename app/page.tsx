@@ -9,9 +9,9 @@ import {
   MotionValue
 } from "motion/react"
 import Markdown from 'react-markdown'
-
 import slide1 from "@/components/slides/1.json"
 import slide2 from "@/components/slides/2.json"
+import slide3 from "@/components/slides/3.json"
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -41,7 +41,8 @@ export default function Home() {
   });
   const slides = [
     slide1,
-    slide2
+    slide2,
+    slide3
   ]
 
   return (
@@ -49,7 +50,7 @@ export default function Home() {
       {slides.map((slide) => (
         <Slide title={slide.title} content={slide.content} key={slide.title} />
       ))}
-      <motion.div className="progress" style={{ scaleX }} />
+      <motion.div className="progress" style={{ scaleX: scaleX }} />
     </>
   );
 }

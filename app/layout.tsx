@@ -19,6 +19,7 @@ export default function RootLayout({
       <body
         className={`${primaryFont.className} antialiased`}
       >
+        <span className="wallpaper"/>
         <Navbar />
         {children}
         <Footer title="Rubén Gómez Dopazo @ 2024" />
