@@ -192,9 +192,9 @@ section {
 
 section > div {
   width: 600px;
-  height: 465px;
+  min-height: fit-content;
+  max-height: calc(100vh - 180px);
   position: relative;
-  max-height: 90vh;
   margin: 20px;
   background: var(--white);
   overflow: hidden;
@@ -215,12 +215,19 @@ section > h2 {
   text-orientation: mixed;
 }
 
-section > img {
-  margin: 0;
-  left: calc(50% - 600px);
-  width: 200px;
-  height: 450px;
-  position: absolute;
+
+@media only screen and (max-width: 1000px) {
+  section {
+    justify-content: left;
+  }
+
+  section > div {
+  
+  }
+
+  section > h2 {
+  
+  }
 }
 
 .slide {
