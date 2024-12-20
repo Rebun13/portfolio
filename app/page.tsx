@@ -24,10 +24,11 @@ function Slide({ title, content }: Readonly<{ title: string, content: string[] }
 
   return (
     <section>
+      <motion.h2 style={{ y }}>{title}</motion.h2>
+      <h3>{title}</h3>
       <div ref={ref}>
         {content.map((paragraph, index) => <div key={`${title.replace(/\s/g, "")}-${index}`} className="slide-text"><Markdown >{paragraph}</Markdown ></div>)}
       </div>
-      <motion.h2 style={{ y }}>{title}</motion.h2>
     </section>
   );
 }

@@ -16,16 +16,16 @@
   }
 }
 
-@font-face{
-  font-family: 'Mulish';
-  src:url(/app/fonts/Mulish.ttf);
+@font-face {
+  font-family: "Mulish";
+  src: url(/app/fonts/Mulish.ttf);
   font-weight: bold;
   font-style: normal;
 }
 
-@font-face{
-  font-family: 'Space';
-  src:url(/app/fonts/SpaceMono.ttf);
+@font-face {
+  font-family: "Space";
+  src: url(/app/fonts/SpaceMono.ttf);
   font-weight: normal;
   font-style: normal;
 }
@@ -155,11 +155,11 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-.wallpaper{
+.wallpaper {
   background-image: url("/portfolio/tile.jpg");
   background-repeat: repeat;
   background-size: 300px 300px;
-  opacity: .1;
+  opacity: 0.1;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -215,18 +215,49 @@ section > h2 {
   text-orientation: mixed;
 }
 
+section > h3 {
+  display: none;
+  position: relative;
+  color: var(--foreground);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+}
 
-@media only screen and (max-width: 1000px) {
-  section {
-    justify-content: left;
+@media only screen and (max-width: 920px) {
+  section > h2 {
+    left: unset;
+    right: 20px;
   }
+}
 
+@media only screen and (max-width: 810px) {
   section > div {
-  
+    margin-right: 110px;
+    overflow: scroll;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  section {
+    scroll-snap-align: unset;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 60px;
   }
 
   section > h2 {
-  
+    display: none;
+  }
+
+  section > h3 {
+    display: block;
+  }
+
+  section > div {
+    width: 95vw;
+    margin: 10px auto;
   }
 }
 
@@ -252,12 +283,12 @@ section > h2 {
   color: var(--foreground);
   border-radius: 5px;
   padding: 0 5px;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .slide-text code:hover {
   color: var(--accent);
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .progress {
