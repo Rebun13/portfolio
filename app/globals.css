@@ -33,6 +33,8 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  margin-top: 60px;
+  margin-bottom: 110px;
 }
 
 h1 {
@@ -200,6 +202,7 @@ section > div {
   overflow: hidden;
   background-color: var(--main);
   padding: 10px 20px;
+  border-radius: 5px;
 }
 
 section > h2 {
@@ -244,7 +247,6 @@ section > h3 {
     scroll-snap-align: unset;
     flex-direction: column;
     height: fit-content;
-    margin-top: 60px;
   }
 
   section > h2 {
