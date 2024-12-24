@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
         search: ""
       },
     ],
-    //unoptimized: true // remove this
+    unoptimized: true // remove this
   },
   reactStrictMode: true,
 };

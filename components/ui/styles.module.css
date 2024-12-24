@@ -1,0 +1,39 @@
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main);
+    width: 60vw;
+    border-radius: 10px;
+    padding: 2em 3em;
+}
+
+.card > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.card > div:first-child {
+    flex: 30%;
+}
+
+.card > div:last-child {
+    flex: 70%;
+}
+
+.card img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.card ul {
+    list-style-type: "> ";
+}

@@ -48,7 +48,6 @@ h1 {
 
 h2 {
   font-weight: 400;
-  margin: 50px 0 10px;
 }
 
 p {
@@ -136,6 +135,16 @@ code {
   font-family: input-mono, monospace;
   font-weight: 400;
   font-style: normal;
+  background-color: var(--background);
+  color: var(--foreground);
+  border-radius: 5px;
+  padding: 0 5px;
+  transition: color 0.5s;
+}
+
+code:hover {
+  color: var(--accent);
+  transition: color 0.5s;
 }
 
 ::-webkit-scrollbar {
@@ -183,6 +192,7 @@ h1 {
 }
 */
 section {
+  margin: 50px 0 10px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -280,19 +290,6 @@ section > h3 {
   text-align: justify;
 }
 
-.slide-text code {
-  background-color: var(--background);
-  color: var(--foreground);
-  border-radius: 5px;
-  padding: 0 5px;
-  transition: color 0.5s;
-}
-
-.slide-text code:hover {
-  color: var(--accent);
-  transition: color 0.5s;
-}
-
 .progress {
   position: fixed;
   left: 0;
@@ -302,4 +299,9 @@ section > h3 {
   bottom: 0;
   z-index: 300;
   transform-origin: 0%;
+}
+
+.gap {
+  height: 500px;
+  display: block;
 }
