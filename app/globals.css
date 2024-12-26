@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --main: #00666b;
-  --accent: #b2f11d;
+  --background: 256, 256, 256;
+  --foreground: 23, 23, 23;
+  --main: 0, 102, 107;
+  --accent: 178, 241, 29;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 10, 10, 10;
+    --foreground: 237, 237, 237;
   }
 }
 
@@ -31,10 +31,8 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  margin-top: 60px;
-  margin-bottom: 110px;
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
 }
 
 h1 {
@@ -65,7 +63,7 @@ header {
   align-items: center;
   padding: 20px;
   background-image: radial-gradient(
-    var(--background) 2px,
+    rgb(var(--background)) 2px,
     rgba(0, 0, 0, 0) 2px
   );
   background-size: 4px 4px;
@@ -83,7 +81,7 @@ header h3 {
 }
 
 header h3.active {
-  color: var(--accent);
+  color: rgb(var(--accent));
 }
 
 header::after {
@@ -94,7 +92,7 @@ header::after {
   left: 0;
   right: 0;
   height: 1px;
-  background: var(--main);
+  background: rgb(var(--main));
   opacity: 0.2;
 }
 
@@ -108,7 +106,7 @@ footer {
   align-items: center;
   padding: 20px;
   background-image: radial-gradient(
-    var(--background) 2px,
+    rgb(var(--background)) 2px,
     rgba(0, 0, 0, 0) 2px
   );
   background-size: 4px 4px;
@@ -127,39 +125,39 @@ footer::before {
   left: 0;
   right: 0;
   height: 1px;
-  background: var(--main);
+  background: rgb(var(--main));
   opacity: 0.2;
 }
 
 code {
   font-family: input-mono, monospace;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: rgb(var(--foreground));
+  color: rgb(var(--background));
   border-radius: 5px;
   padding: 0 5px;
-  transition: color 0.5s;
+  transition: background-color 0.5s;
 }
 
 code:hover {
-  color: var(--accent);
-  transition: color 0.5s;
+  background-color: rgb(var(--accent));
+  transition: background-color 0.5s;
 }
 
 ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
-  background: var(--background);
+  background: rgb(var(--background));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--main);
+  background: rgb(var(--main));
   -webkit-border-radius: 1ex;
 }
 
 ::-webkit-scrollbar-corner {
-  background: var(--background);
+  background: rgb(var(--background));
 }
 
 html {
@@ -181,18 +179,7 @@ html {
   right: 0;
 }
 
-/*
-h1 {
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: -3px;
-  line-height: 1.2;
-  text-align: center;
-  margin: 100px 0;
-}
-*/
 section {
-  margin: 50px 0 10px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -208,16 +195,15 @@ section > div {
   max-height: calc(100vh - 180px);
   position: relative;
   margin: 20px;
-  background: var(--white);
   overflow: hidden;
-  background-color: var(--main);
   padding: 10px 20px;
   border-radius: 5px;
+  background-color: rgba(var(--background), 0.7);
 }
 
 section > h2 {
   margin: 0;
-  color: var(--foreground);
+  color: rgb(var(--foreground));
   left: calc(50% + 380px);
   font-size: 56px;
   font-weight: 700;
@@ -231,7 +217,7 @@ section > h2 {
 section > h3 {
   display: none;
   position: relative;
-  color: var(--foreground);
+  color: rgb(var(--foreground));
   font-size: 56px;
   font-weight: 700;
   letter-spacing: -3px;
@@ -295,7 +281,7 @@ section > h3 {
   left: 0;
   right: 0;
   height: 10px;
-  background: var(--accent);
+  background: rgb(var(--accent));
   bottom: 0;
   z-index: 300;
   transform-origin: 0%;
