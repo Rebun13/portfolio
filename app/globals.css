@@ -55,17 +55,20 @@ p {
 
 header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: inline-flex;
+  top: 10px;
+  left: 10px;
+  display: flex;
   justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
+  align-items: start;
+  flex-direction: column;
+  padding: 10px;
   background-image: radial-gradient(
     rgb(var(--background)) 2px,
     rgba(0, 0, 0, 0) 2px
   );
+  white-space: nowrap;
+  border-radius: 10px;
+  gap: 40px;
   background-size: 4px 4px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -73,11 +76,13 @@ header {
   font-size: 14px;
   line-height: 14px;
   z-index: 200;
+  overflow: hidden;
+  transition: height 1s, width 1s;
 }
 
 header h3 {
-  margin: 0 20px;
   font-weight: bold;
+  margin: 0 1em;
 }
 
 header h3.active {

@@ -8,7 +8,6 @@ export function Logo() {
             width={40}
             height={40}
             alt="Logo"
-            className='mx-4'
         />
     );
 }
