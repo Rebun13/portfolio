@@ -2,7 +2,7 @@
 
 import * as motion from "motion/react-client"
 import { ReactNode, useRef } from "react"
-import { CardProp } from "../../work-exp-cards/cards"
+import { CardProp } from "../../../work-exp-cards/cards"
 
 import styles from './styles.module.css'
 import Image from 'next/image'

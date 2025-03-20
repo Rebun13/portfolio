@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/cards/card"
+import { Card } from "@/components/ui/containers/cards/card"
 
 import { CardProp, aimenCard, kaseyaCard } from "@/components/work-exp-cards/cards"
 
