@@ -7,13 +7,12 @@
   --foreground: 23, 23, 23;
   --main: 0, 102, 107;
   --accent: 178, 241, 29;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 10, 10, 10;
-    --foreground: 237, 237, 237;
-  }
+[data-theme='dark'] {
+  --background: 10, 10, 10;
+  --foreground: 237, 237, 237;
 }
 
 @font-face {
@@ -51,54 +50,6 @@ h2 {
 p {
   margin: 0 0 30px 0;
   font-size: 18px;
-}
-
-header {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: start;
-  flex-direction: column;
-  padding: 10px;
-  background-image: radial-gradient(
-    rgb(var(--background)) 2px,
-    rgba(0, 0, 0, 0) 2px
-  );
-  white-space: nowrap;
-  border-radius: 10px;
-  gap: 40px;
-  background-size: 4px 4px;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  -moz-backdrop-filter: blur(3px);
-  font-size: 14px;
-  line-height: 14px;
-  z-index: 200;
-  overflow: hidden;
-  transition: height 1s, width 1s;
-}
-
-header h3 {
-  font-weight: bold;
-  margin: 0 1em;
-}
-
-header h3.active {
-  color: rgb(var(--accent));
-}
-
-header::after {
-  display: block;
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: rgb(var(--main));
-  opacity: 0.2;
 }
 
 footer {

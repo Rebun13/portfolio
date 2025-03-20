@@ -1,0 +1,61 @@
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 60px;
+    width: 60px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    padding: 10px;
+    background-image: radial-gradient(rgb(var(--background)) 2px,
+            rgba(0, 0, 0, 0) 2px);
+    white-space: nowrap;
+    border-radius: 10px;
+    gap: 40px;
+    background-size: 4px 4px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    -moz-backdrop-filter: blur(3px);
+    font-size: 14px;
+    line-height: 14px;
+    z-index: 200;
+    overflow: hidden;
+    transition: height .25s ease, width .25s ease;
+}
+
+.navbar:hover {
+    height: 250px;
+    width: 200px;
+    transition: height .25s ease, width .25s ease;
+}
+
+.navbar::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgb(var(--main));
+    opacity: 0.2;
+}
+
+.navbarItem {
+    font-weight: bold;
+    margin: 0 10px;
+    transition: font-size .25s ease;
+}
+
+.navbarItem.active {
+    color: rgb(var(--accent));
+}
+
+.navbarItem:hover:not(.active) {
+    font-size: 17px;
+    color: rgb(var(--main));
+    transition: font-size .25s ease;
+}
