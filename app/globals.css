@@ -5,8 +5,6 @@
 :root {
   --background: 256, 256, 256;
   --foreground: 23, 23, 23;
-  --main: 0, 102, 107;
-  --main-font: 255, 255, 255;
   --accent: 178, 241, 29;
   --accent-font: 0, 0, 0;
   
@@ -83,7 +81,7 @@ footer::before {
   left: 0;
   right: 0;
   height: 1px;
-  background: rgb(var(--main));
+  background: rgb(var(--accent));
   opacity: 0.2;
 }
 
@@ -111,7 +109,7 @@ code:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(var(--main));
+  background: rgb(var(--accent));
   -webkit-border-radius: 1ex;
 }
 
@@ -127,7 +125,7 @@ html {
   background-image: url("/portfolio/tile.jpg");
   background-repeat: repeat;
   background-size: 300px 300px;
-  opacity: 0.1;
+  opacity: 0.2;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -242,12 +240,13 @@ section > h3 {
 }
 
 .title {
-  background-color: rgb(var(--main));
-  color: rgb(var(--main-font));
+  background-color: rgb(var(--accent));
+  color: rgb(var(--accent-font));
   padding: .25em 1em;
   border-radius: 5px;
   width: fit-content;
   margin: 1em auto;
+  border: 2px solid rgb(var(--foreground));
 }
 
 .progress {
