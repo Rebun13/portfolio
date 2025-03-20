@@ -2,7 +2,8 @@ export interface CardProp {
     title: string
     subtitle: string
     description: string
-    image: string
+    image_light: string
+    image_dark: string
 }
 
 export const aimenCard: CardProp = {
@@ -16,7 +17,8 @@ export const aimenCard: CardProp = {
         "- Design and development of micro-services.",
         "- Full-stack web development.",
     ].join("\n"),
-    image: "https://www.aimen.es/assets/img/logo-aimen-white-en.png"
+    image_dark: "https://www.aimen.es/assets/img/logo-aimen-white-en.png",
+    image_light: "https://www.aimen.es/assets/img/logo-aimen-en.png",
 }
 
 export const kaseyaCard: CardProp = {
@@ -28,5 +30,6 @@ export const kaseyaCard: CardProp = {
     description: [
         "* Web development with React JS, PHP and MySQL."
     ].join("\n"),
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kaseya_SVG_Logo.svg"
+    image_dark: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kaseya_SVG_Logo.svg",
+    image_light: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kaseya_SVG_Logo.svg"
 }

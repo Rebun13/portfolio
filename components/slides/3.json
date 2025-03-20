@@ -1,8 +1,8 @@
 {
-    "title": "My ideals",
+    "title": "What I want",
     "content": [
-        "I tend to `trust people` because I think humans are naturally good. I like to be kind to people around me, and care about my friends and colleagues. Individualism has gone too far in today's world.",
-        "In another topic, the struggle that matters most to me is `environmentalism`. I grew up in the countryside and have always been connected to nature, so I have been concerned about protecting it.",
+        "Professionally, my main goal is to be a successful `videogame developer`. Currently I am working on little projects to learn theory and best practices on C++ and videogame deveopment in general. I am very interested on design and keeping my code clean, efficient and flexible, so I focus on good practices and programming patterns.",
+        "Personally, the struggle that matters most to me is `environmentalism`. I grew up in the countryside and have always been connected to nature, so I am deeply concerned about protecting it.",
         "I support other social causes, but I don't want to bore you `:P`"
     ]
 }

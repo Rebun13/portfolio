@@ -3,7 +3,7 @@
 import { accentFont } from "@/components/fonts/fonts";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Logo } from "@/components/ui/logo/Logo";
+import { Logo } from "@/components/ui/logos/Logos";
 import styles from "./styles.module.css";
 
 interface Element {

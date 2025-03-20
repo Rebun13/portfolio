@@ -18,16 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${primaryFont.className} antialiased`}
-        suppressHydrationWarning
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${primaryFont.className} antialiased`}>
         <ThemeProvider>
           <div className="container">
             <span className="wallpaper" />
             <Navbar />
-            <ThemeToggle/>
+            <ThemeToggle />
             {children}
             <Footer title={`Rubén Gómez Dopazo @ ${new Date().getFullYear()}`} />
           </div>

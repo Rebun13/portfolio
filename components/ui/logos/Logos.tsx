@@ -16,3 +16,15 @@ export function Logo() {
         />
     );
 }
+
+export function LinkLogo({ height, width, src, alt }: Readonly<{ height: number, width: number, src: string, alt: string }>) {
+    return (
+        <Image
+            src={src}
+            width={width}
+            height={height}
+            alt={alt}
+            color='black'
+        />
+    );
+}

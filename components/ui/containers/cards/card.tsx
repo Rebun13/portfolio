@@ -1,31 +1,25 @@
 "use client"
 
-import * as motion from "motion/react-client"
 import { ReactNode, useRef } from "react"
 import { CardProp } from "../../../work-exp-cards/cards"
+import { useTheme } from "next-themes"
+import {LinkLogo} from "@/components/ui/logos/Logos"
 
 import styles from './styles.module.css'
-import Image from 'next/image'
 import Markdown from 'react-markdown'
 
-import '@/app/globals.css'
 
-export function Card({ card }: { card: CardProp }): ReactNode {
-    const ref = useRef(null)
+export function Card({ card }: Readonly<{ card: CardProp }>): ReactNode {
+    const { theme } = useTheme();
 
     return (
-        <motion.div
+        <div
             className={styles.cardContainer}
-            initial={{ x: -300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100 }} // Smooth transition
-            ref={ref}
         >
             <div className={styles.card}>
-                <div>
-                    <Image
-                        src={card.image}
+                <div className={styles.cardImage}>
+                    <LinkLogo
+                        src={theme === "light" ? card.image_light : card.image_dark}
                         width={400}
                         height={100}
                         alt={card.title}
@@ -36,6 +30,6 @@ export function Card({ card }: { card: CardProp }): ReactNode {
                     <Markdown>{card.description}</Markdown>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
