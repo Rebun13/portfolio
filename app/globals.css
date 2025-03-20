@@ -223,6 +223,12 @@ section > h3 {
   margin-bottom: 80px;
 }
 
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: 80px;
+  } 
+}
+
 .mainPage {
   margin: 0 auto;
   max-width: 90%;
@@ -232,14 +238,13 @@ section > h3 {
   .mainPage {
     max-width: 100%;
     margin: 0 5px;
-  }
-  
+  } 
 }
 
 .title {
   background-color: rgb(var(--main));
   color: rgb(var(--main-font));
-  padding: 1em;
+  padding: .25em 1em;
   border-radius: 5px;
   width: fit-content;
   margin: 1em auto;
