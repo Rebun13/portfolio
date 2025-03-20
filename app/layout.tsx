@@ -23,10 +23,12 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
-        <span className="wallpaper" />
-        <Navbar />
-        {children}
-        <Footer title={`Rubén Gómez Dopazo @ ${new Date().getFullYear()}`} />
+          <div className="container">
+            <span className="wallpaper" />
+            <Navbar />
+            {children}
+            <Footer title={`Rubén Gómez Dopazo @ ${new Date().getFullYear()}`} />
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -24,7 +24,8 @@
     font-size: larger;
     font-weight: bold;
     color: rgb(var(--background));
-    background-color: rgb(var(--foreground));
+    background-color: rgb(var(--accent));
     padding: 0 10px;
     border-radius: 20px;
+    border: 2px solid rgb(var(--foreground));
 }

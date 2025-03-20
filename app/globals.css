@@ -94,6 +94,7 @@ code {
   border-radius: 5px;
   padding: 0 5px;
   transition: background-color 0.5s;
+  white-space: nowrap;
 }
 
 code:hover {
@@ -133,6 +134,7 @@ html {
   left: 0;
   bottom: 0;
   right: 0;
+  pointer-events: none;
 }
 
 section {
@@ -215,21 +217,13 @@ section > h3 {
   }
 }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 50;
+.container {
+  margin-bottom: 80px;
 }
 
-.slide-text {
-  z-index: 100;
-  position: relative;
-  text-align: justify;
+.mainPage {
+  margin: 0 auto;
+  width: 90%;
 }
 
 .progress {
@@ -241,9 +235,4 @@ section > h3 {
   bottom: 0;
   z-index: 300;
   transform-origin: 0%;
-}
-
-.gap {
-  height: 500px;
-  display: block;
 }

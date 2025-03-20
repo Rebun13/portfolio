@@ -1,14 +1,15 @@
 
 import Markdown from 'react-markdown';
+import { v4 as uuid } from 'uuid';
 
 import styles from "./styles.module.css";
 
-export function Slide({ title, content }: Readonly<{ title: string, content: string[] }>) {
+export function Slide({ title, content }: Readonly<{ title: string | null, content: string[] }>) {
     return (
         <div className={styles.slide}>
-            <div className={styles.slideTitle}><span>{title}</span></div>
+            { title? <div className={styles.slideTitle}><span>{title}</span></div> : <></>}
             <div className={styles.slideContent}>
-                {content.map((paragraph, index) => <div key={`${title.replace(/\s/g, "")}-${index}`} className={styles.slidetext}><Markdown >{paragraph}</Markdown ></div>)}
+                {content.map((paragraph) => <div key={uuid()} className={styles.slidetext}><Markdown >{paragraph}</Markdown ></div>)}
             </div>
         </div>
     );

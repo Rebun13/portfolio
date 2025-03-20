@@ -25,13 +25,14 @@ export default function Home() {
   ]
 
   return (
-    <>
+    <div className="mainPage">
+      <h1 className="title">About me</h1>
       <SlidesContainer>
         {slides.map((slide) => (
           <Slide title={slide.title} content={slide.content} key={slide.title} />
         ))}
       </SlidesContainer>
       <motion.div className="progress" style={{ scaleX: scaleX }} />
-    </>
+    </div>
   );
 }
