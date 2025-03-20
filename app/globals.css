@@ -225,7 +225,15 @@ section > h3 {
 
 .mainPage {
   margin: 0 auto;
-  width: 90%;
+  max-width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .mainPage {
+    max-width: 100%;
+    margin: 0 5px;
+  }
+  
 }
 
 .title {
