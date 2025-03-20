@@ -5,6 +5,7 @@ import { Footer } from "@/components/ui/footer/Footer";
 
 import "@/app/globals.css";
 import { primaryFont } from "../components/fonts/fonts";
+import { ThemeToggle } from "@/components/ui/theme/ThemeToggle";
 
 export const metadata: Metadata = {
   title: "Ruben Gomez Dopazo",
@@ -26,6 +27,7 @@ export default function RootLayout({
           <div className="container">
             <span className="wallpaper" />
             <Navbar />
+            <ThemeToggle/>
             {children}
             <Footer title={`Rubén Gómez Dopazo @ ${new Date().getFullYear()}`} />
           </div>

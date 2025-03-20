@@ -6,7 +6,9 @@
   --background: 256, 256, 256;
   --foreground: 23, 23, 23;
   --main: 0, 102, 107;
+  --main-font: 255, 255, 255;
   --accent: 178, 241, 29;
+  --accent-font: 0, 0, 0;
   
 }
 
@@ -224,6 +226,15 @@ section > h3 {
 .mainPage {
   margin: 0 auto;
   width: 90%;
+}
+
+.title {
+  background-color: rgb(var(--main));
+  color: rgb(var(--main-font));
+  padding: 1em;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 1em auto;
 }
 
 .progress {

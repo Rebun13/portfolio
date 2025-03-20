@@ -1,0 +1,13 @@
+.themeToggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 500;
+    cursor: pointer;
+}
+
+.themeToggleIcon {
+    color: rgba(var(--foreground), 0.7);
+    height: 40px;
+    width: 40px;
+}
