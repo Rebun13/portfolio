@@ -6,7 +6,7 @@ import { motion, useScroll, useSpring } from "motion/react";
 import { CardProp, aimenCard, kaseyaCard, ctagCard } from "@/components/work-exp-cards/cards"
 
 
-export default async function WorkExperience() {
+export default function WorkExperience() {
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
