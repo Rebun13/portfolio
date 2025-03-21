@@ -9,9 +9,11 @@ import Image from 'next/image'
 import Markdown from 'react-markdown'
 
 import '@/app/globals.css'
+import { useTheme } from "next-themes"
 
-export function Card({ card }: { card: CardProp }): ReactNode {
+export function Card({ card }: Readonly<{ card: CardProp }>): ReactNode {
     const ref = useRef(null)
+    const {theme} = useTheme()
 
     return (
         <motion.div
@@ -25,7 +27,7 @@ export function Card({ card }: { card: CardProp }): ReactNode {
             <div className={styles.card}>
                 <div>
                     <Image
-                        src={card.image}
+                        src={theme === "light" ? card.image_light : card.image_dark}
                         width={400}
                         height={100}
                         alt={card.title}

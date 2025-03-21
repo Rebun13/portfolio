@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --background: 256, 256, 256;
   --foreground: 23, 23, 23;
