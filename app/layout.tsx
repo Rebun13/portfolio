@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${primaryFont.className} antialiased`}>
+    <html lang="en">
+      <body className={`${primaryFont.className} antialiased`} suppressHydrationWarning  >
         <ThemeProvider>
           <div className="container">
             <span className="wallpaper" />

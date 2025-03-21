@@ -25,9 +25,9 @@ export function Card({ card }: Readonly<{ card: CardProp }>): ReactNode {
                         alt={card.title}
                     />
                 </div>
-                <div>
-                    <Markdown>{card.subtitle}</Markdown>
-                    <Markdown>{card.description}</Markdown>
+                <div className={styles.cardDetails}>
+                    <Markdown className={styles.cardDetailsTitle}>{card.subtitle}</Markdown>
+                    <Markdown className={styles.cardDetailsDescr}>{card.description}</Markdown>
                 </div>
             </div>
         </div>
