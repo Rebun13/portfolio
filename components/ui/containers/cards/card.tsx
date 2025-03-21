@@ -1,6 +1,6 @@
 "use client"
 
-import { ReactNode, useRef } from "react"
+import { ReactNode } from "react"
 import { CardProp } from "../../../work-exp-cards/cards"
 import { useTheme } from "next-themes"
 import {LinkLogo} from "@/components/ui/logos/Logos"

@@ -30,7 +30,6 @@
     border: 2px solid rgb(var(--foreground));
     border-radius: 10px;
     background-color: white;
-    /* background: repeating-linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent)) 2px, rgb(var(--background)) 2px, rgb(var(--background)) 20px); */
 }
 
 .cardImage img {
