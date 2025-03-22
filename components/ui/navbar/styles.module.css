@@ -2,9 +2,8 @@
     position: fixed;
     top: 10px;
     left: 10px;
-    height: 60px;
-    width: 60px;
-
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: flex-start;
     align-items: start;
@@ -24,6 +23,11 @@
     z-index: 200;
     overflow: hidden;
     transition: height .25s ease, width .25s ease;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(var(--foreground));
 }
 
 .navbar:hover {
@@ -47,7 +51,6 @@
 .navbarItem {
     font-weight: bold;
     margin: 0 10px;
-    transition: font-size .25s ease;
 }
 
 .navbarItem.active {
