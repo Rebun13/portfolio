@@ -7,7 +7,7 @@
 
 .card {
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 324px auto;
     gap: 20px;
     background-color: var(--accent);
     width: 100%;
@@ -35,16 +35,64 @@
 .cardImage img {
     color: black;
     border-radius: 10px;
+    width: 100%;
 }
 
 .cardDetails {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    position: relative;
+    border-top: 1px solid rgb(var(--foreground));
+    margin: 20px 0;
+    padding: 10px 0;
 }
 
-.cardDetailsTitle *{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5px;
+.cardDetailsTitle {
+    position: absolute;
+    top: -16px;
+    left: 40px;
+    border: 2px solid rgb(var(--foreground));
+    border-radius: 20px;
+    background-color: rgb(var(--accent));
+    color: rgb(var(--accent-font));
+    padding: 0 10px;
+    font-size: larger;
+}
+
+.cardDetailsSubtitle {
+    position: absolute;
+    top: -16px;
+    right: 40px;
+    background-color: rgb(var(--foreground));
+    color: rgb(var(--background));
+    border-radius: 20px;
+    padding: 0 10px;
+    font-size: larger;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        grid-template-columns: auto;
+    }
+
+    .cardImage {
+        margin: 0 auto;
+    }
+
+    .cardDetails {
+        border-top: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cardDetailsTitle {
+        position: static;
+        font-size: medium;
+        justify-content: center;
+        margin-bottom: 3px;
+    }
+
+    .cardDetailsSubtitle {
+        position: static;
+        font-size: medium;
+        justify-content: center;
+    }
 }

@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/containers/cards/card";
 import { motion, useScroll, useSpring } from "motion/react";
 
-import { CardProp, aimenCard, kaseyaCard, ctagCard } from "@/components/work-exp-cards/cards"
+import { CardProp, aimenCard, kaseyaCard, ctagCard } from "@/components/data/work-exp-cards/cards"
 
 
 export default function WorkExperience() {

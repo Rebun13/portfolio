@@ -7,10 +7,9 @@ export interface CardProp {
 }
 
 export const aimenCard: CardProp = {
-    title: "AIMEN",
+    title: "Research Software Engineer",
     subtitle: [
-        "## `Research Software Engineer`",
-        "### Current job | Spain"
+        "Current job | Spain"
     ].join("\n"),
     description: [
         "- Deployment with Docker of micro-services developed in Python and/or React.",
@@ -23,10 +22,9 @@ export const aimenCard: CardProp = {
 }
 
 export const kaseyaCard: CardProp = {
-    title: "KASEYA",
+    title: "Full Stack Developer",
     subtitle: [
-        "## `Full Stack Developer`",
-        "### 4 months | Ireland",
+        "4 months | Ireland",
     ].join("\n"),
     description: [
         "- Web development with React JS, PHP and MySQL."
@@ -36,10 +34,9 @@ export const kaseyaCard: CardProp = {
 }
 
 export const ctagCard: CardProp = {
-    title: "CTAG",
+    title: "Backend Cloud Developer",
     subtitle: [
-        "## `Backend Cloud Developer`",
-        "### 1 year 4 months | Spain",
+        "1 year 4 months | Spain",
     ].join("\n"),
     description: [
         "- Design and development of REST APIs and libraries with Python."

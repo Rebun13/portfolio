@@ -1,7 +1,7 @@
 "use client"
 
 import { ReactNode } from "react"
-import { CardProp } from "../../../work-exp-cards/cards"
+import { CardProp } from "../../../data/work-exp-cards/cards"
 import { useTheme } from "next-themes"
 import {LinkLogo} from "@/components/ui/logos/Logos"
 
@@ -26,7 +26,8 @@ export function Card({ card }: Readonly<{ card: CardProp }>): ReactNode {
                     />
                 </div>
                 <div className={styles.cardDetails}>
-                    <Markdown className={styles.cardDetailsTitle}>{card.subtitle}</Markdown>
+                    <div className={styles.cardDetailsTitle}>{card.title}</div>
+                    <div className={styles.cardDetailsSubtitle}>{card.subtitle}</div>
                     <Markdown className={styles.cardDetailsDescr}>{card.description}</Markdown>
                 </div>
             </div>

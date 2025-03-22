@@ -5,9 +5,9 @@ import {
   motion, useScroll,
   useSpring,
 } from "motion/react";
-import slide1 from "@/components/slides/1.json";
-import slide2 from "@/components/slides/2.json";
-import slide3 from "@/components/slides/3.json";
+import slide1 from "@/components/data/slides/1.json";
+import slide2 from "@/components/data/slides/2.json";
+import slide3 from "@/components/data/slides/3.json";
 import { Slide, SlidesContainer } from "@/components/ui/containers/slides/Slide";
 
 
