@@ -4,6 +4,7 @@ export interface CardProp {
     description: string
     image_light: string
     image_dark: string
+    company?: string
 }
 
 export const aimenCard: CardProp = {
@@ -19,6 +20,7 @@ export const aimenCard: CardProp = {
     // image_dark: "https://www.aimen.es/assets/img/logo-aimen-white-en.png",
     image_dark: "https://www.aimen.es/assets/img/logo-aimen-en.png",
     image_light: "https://www.aimen.es/assets/img/logo-aimen-en.png",
+    company: "AIMEN"
 }
 
 export const kaseyaCard: CardProp = {
@@ -30,7 +32,8 @@ export const kaseyaCard: CardProp = {
         "- Web development with React JS, PHP and MySQL."
     ].join("\n"),
     image_dark: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kaseya_SVG_Logo.svg",
-    image_light: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kaseya_SVG_Logo.svg"
+    image_light: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kaseya_SVG_Logo.svg",
+    company: "Kaseya"
 }
 
 export const ctagCard: CardProp = {
@@ -42,5 +45,6 @@ export const ctagCard: CardProp = {
         "- Design and development of REST APIs and libraries with Python."
     ].join("\n"),
     image_dark: "https://aspromec.org/wp-content/uploads/2020/10/CTAG.jpg",
-    image_light: "https://aspromec.org/wp-content/uploads/2020/10/CTAG.jpg"
+    image_light: "https://aspromec.org/wp-content/uploads/2020/10/CTAG.jpg",
+    company: "CTAG"
 }

@@ -22,7 +22,7 @@ export function Card({ card }: Readonly<{ card: CardProp }>): ReactNode {
                         src={theme === "light" ? card.image_light : card.image_dark}
                         width={400}
                         height={100}
-                        alt={card.title}
+                        alt={card.company? card.company : "company logo"}
                     />
                 </div>
                 <div className={styles.cardDetails}>
