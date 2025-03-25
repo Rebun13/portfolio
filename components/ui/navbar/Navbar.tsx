@@ -26,6 +26,10 @@ export function Navbar() {
             "label": "Studies",
             "path": "/studies",
         },
+        {
+            "label": "Projects",
+            "path": "/projects",
+        },
     ]
 
     return (

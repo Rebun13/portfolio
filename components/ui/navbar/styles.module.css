@@ -31,7 +31,7 @@
 }
 
 .navbar:hover {
-    height: 250px;
+    height: 300px;
     width: 200px;
     transition: height .25s ease, width .25s ease;
 }
