@@ -23,11 +23,20 @@ export function Logo() {
     );
 }
 
-export function LinkLogo({ height, width, src, alt }: Readonly<{ height: number, width: number, src: string, alt: string }>) {
+export function LinkLogo({ height, width, src, alt }: Readonly<{ height?: number, width?: number, src: string, alt: string }>) {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => setIsLoading(false), []);
     if (isLoading) return <></>
-
+    if (!width || !height) {
+        return (
+            <Image
+                src={src}
+                alt={alt}
+                layout={'fill'}
+                objectFit={'contain'}
+            />
+        );
+    }
     return (
         <Image
             src={src}

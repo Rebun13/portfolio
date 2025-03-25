@@ -2,7 +2,7 @@
     position: relative;
     max-width: 90%;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 0 145px;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -18,7 +18,7 @@
 }
 
 .timelineItem {
-    padding: 10px 40px;
+    padding: 10px 0;
     position: relative;
     width: 100vw - 120px;
     padding-left: 39px;
@@ -30,7 +30,7 @@
     content: " ";
     height: 0;
     position: absolute;
-    top: 30px;
+    top: 40px;
     width: 0;
     z-index: 1;
     left: 30px;
@@ -48,7 +48,7 @@
     left: -11px;
     background-color: rgb(var(--accent));
     border: 3px solid rgb(var(--foreground));
-    top: 30px;
+    top: 40px;
     border-radius: 50%;
     z-index: 1;
 }
@@ -61,6 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .itemContent {
@@ -72,6 +73,20 @@
     border-radius: 5px;
 }
 
+.itemDetails {
+    padding: 0 1em;
+}
+
+.itemTitle {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    padding: 0 .5em;
+    border-radius: 5px;
+    border: 2px solid rgb(var(--accent));
+    width: fit-content;
+    margin: 10px 0;
+}
+
 .timeTag {
     position: absolute;
     left: -120px;
@@ -81,21 +96,33 @@
 @media only screen and (max-width: 980px) {
     .timeline {
         max-width: 100%;
+        margin-left: 10px;
     }
 
-    .timeline::after {
-        margin-left: 117px;
-    }
-
-    .timelineWrapper {
-        margin: 0 0 0 120px;
-    }
-
-    .timelineItem {
-        width: calc(100vw - 180px);
+    .timeTag {
+        position: static;
+        left: -120px;
+        top: 30px;
     }
 
     .itemContent {
         grid-template-columns: auto;
+        grid-template-rows: 140px 1fr;
+    }
+
+    .itemTitle {
+        font-size: 1.2rem;
+    }
+
+    .itemSubtitle {
+        font-size: 1rem;
+    }
+
+    .itemDescription {
+        font-size: .8rem;
+    }
+
+    .itemDescription code {
+        white-space: unset;
     }
 }

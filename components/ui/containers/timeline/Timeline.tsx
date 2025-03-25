@@ -5,6 +5,7 @@ import { v4 as uuid } from "uuid";
 import styles from "./styles.module.css";
 import { LinkLogo } from "@/components/ui/logos/Logos";
 import { TimelineItem } from "@/components/types";
+import Markdown from "react-markdown";
 
 export default function Timeline({ items }: Readonly<{ items: Array<TimelineItem> }>) {
     const [isLoading, setIsLoading] = useState(true);
@@ -18,11 +19,11 @@ export default function Timeline({ items }: Readonly<{ items: Array<TimelineItem
                     <div key={uuid()} className={styles.timelineItem}>
                         <span className={styles.timeTag}>{item.dates}</span>
                         <div className={styles.itemContent}>
-                            <div className={styles.itemImage} ><LinkLogo src={item.image} alt={"logo"} height={120} width={200}/></div>
+                            <div className={styles.itemImage} ><LinkLogo src={item.image} alt={"logo"}/></div>
                             <div className={styles.itemDetails}>
                                 <h2 className={styles.itemTitle}>{item.title}</h2>
                                 <h3 className={styles.itemSubtitle}>{item.subtitle}</h3>
-                                <p className={styles.itemDescription}>{item.description}</p>
+                                <p className={styles.itemDescription}><Markdown>{item.description}</Markdown></p>
                             </div>
                         </div>
                     </div>
