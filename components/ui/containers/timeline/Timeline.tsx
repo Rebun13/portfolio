@@ -23,7 +23,7 @@ export default function Timeline({ items }: Readonly<{ items: Array<TimelineItem
                             <div className={styles.itemDetails}>
                                 <h2 className={styles.itemTitle}>{item.title}</h2>
                                 <h3 className={styles.itemSubtitle}>{item.subtitle}</h3>
-                                <p className={styles.itemDescription}><Markdown>{item.description}</Markdown></p>
+                                <div className={styles.itemDescription}><Markdown>{item.description}</Markdown></div>
                             </div>
                         </div>
                     </div>
