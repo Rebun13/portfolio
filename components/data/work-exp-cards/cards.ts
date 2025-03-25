@@ -18,8 +18,8 @@ export const aimenCard: CardProp = {
         "- Full-stack web development.",
     ].join("\n"),
     // image_dark: "https://www.aimen.es/assets/img/logo-aimen-white-en.png",
-    image_dark: "https://www.aimen.es/assets/img/logo-aimen-en.png",
-    image_light: "https://www.aimen.es/assets/img/logo-aimen-en.png",
+    image_dark: "./aimen_logo.png",
+    image_light: "./aimen_logo.png",
     company: "AIMEN"
 }
 
@@ -31,8 +31,8 @@ export const kaseyaCard: CardProp = {
     description: [
         "- Web development with React JS, PHP and MySQL."
     ].join("\n"),
-    image_dark: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kaseya_SVG_Logo.svg",
-    image_light: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kaseya_SVG_Logo.svg",
+    image_dark: "./kaseya_logo.png",
+    image_light: "./kaseya_logo.png",
     company: "Kaseya"
 }
 
@@ -44,7 +44,7 @@ export const ctagCard: CardProp = {
     description: [
         "- Design and development of REST APIs and libraries with Python."
     ].join("\n"),
-    image_dark: "https://aspromec.org/wp-content/uploads/2020/10/CTAG.jpg",
-    image_light: "https://aspromec.org/wp-content/uploads/2020/10/CTAG.jpg",
+    image_dark: "./ctag_logo.jpg",
+    image_light: "./ctag_logo.jpg",
     company: "CTAG"
 }

@@ -3,7 +3,7 @@
 import { ReactNode } from "react"
 import { CardProp } from "../../../data/work-exp-cards/cards"
 import { useTheme } from "next-themes"
-import {LinkLogo} from "@/components/ui/logos/Logos"
+import { LinkLogo } from "@/components/ui/logos/Logos"
 
 import styles from './styles.module.css'
 import Markdown from 'react-markdown'
@@ -20,9 +20,7 @@ export function Card({ card }: Readonly<{ card: CardProp }>): ReactNode {
                 <div className={styles.cardImage}>
                     <LinkLogo
                         src={theme === "light" ? card.image_light : card.image_dark}
-                        width={400}
-                        height={100}
-                        alt={card.company? card.company : "company logo"}
+                        alt={card.company ? card.company : "company logo"}
                     />
                 </div>
                 <div className={styles.cardDetails}>
