@@ -71,6 +71,7 @@
 @media screen and (max-width: 768px) {
     .card {
         grid-template-columns: auto;
+        padding: 2em 0;
     }
 
     .cardImage {
