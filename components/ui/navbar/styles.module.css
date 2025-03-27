@@ -1,4 +1,5 @@
 .navbar {
+    border: none;
     position: fixed;
     top: 10px;
     left: 10px;
@@ -30,7 +31,7 @@
     color: rgb(var(--foreground));
 }
 
-.navbar:hover {
+.navbar.active {
     height: 300px;
     width: 200px;
     transition: height .25s ease, width .25s ease;
