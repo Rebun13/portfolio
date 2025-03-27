@@ -7,7 +7,6 @@
 }
 
 .slide {
-    margin: 2px;
     padding: 1em;
     border: 1px solid rgb(var(--foreground));
     border-radius: 5px;

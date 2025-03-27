@@ -68,6 +68,23 @@
     font-size: larger;
 }
 
+@media screen and (max-width: 1250px) {
+    .cardDetails {
+        border-top: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cardDetailsTitle {
+        position: static;
+        margin-bottom: 5px;
+    }
+
+    .cardDetailsSubtitle {
+        position: static;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .card {
         grid-template-columns: auto;
@@ -78,21 +95,12 @@
         margin: 0 auto;
     }
 
-    .cardDetails {
-        border-top: none;
-        margin: 0;
-        padding: 0;
-    }
-
     .cardDetailsTitle {
-        position: static;
         font-size: medium;
         justify-content: center;
-        margin-bottom: 3px;
     }
 
     .cardDetailsSubtitle {
-        position: static;
         font-size: medium;
         justify-content: center;
     }

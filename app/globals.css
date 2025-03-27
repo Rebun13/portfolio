@@ -28,6 +28,7 @@
 body {
   color: rgb(var(--foreground));
   background: rgb(var(--background));
+  margin: 0;
 }
 
 h1 {
@@ -231,7 +232,7 @@ section > h3 {
 @media screen and (max-width: 768px) {
   .mainPage {
     max-width: 100%;
-    margin: 0 5px;
+    margin: 0;
   } 
 }
 
