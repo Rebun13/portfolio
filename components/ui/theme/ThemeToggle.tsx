@@ -12,14 +12,14 @@ export function ThemeToggle() {
 
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => setIsLoading(false), []);
-    if(isLoading) return <></>
+    if (isLoading) return <></>
 
     return (
         <div className={styles.themeToggle}>
             <span>
                 {theme === "dark" ?
                     <SunIcon className={styles.themeToggleIcon} onClick={() => setTheme("light")} />
-                    : <MoonIcon  className={styles.themeToggleIcon} onClick={() => setTheme("dark")} />
+                    : <MoonIcon className={styles.themeToggleIcon} onClick={() => setTheme("dark")} />
                 }
             </span>
         </div>

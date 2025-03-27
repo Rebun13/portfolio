@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${primaryFont.className} antialiased`} suppressHydrationWarning>
-        <ThemeProvider>
+        <ThemeProvider enableSystem={false} defaultTheme="dark">
           <div className="container">
             <span className="wallpaper" />
             <Navbar />
