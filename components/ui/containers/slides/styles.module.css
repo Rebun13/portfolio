@@ -8,7 +8,7 @@
 
 .slide {
     padding: 1em;
-    border: 1px solid rgb(var(--foreground));
+    border: 1px solid rgb(var(--secondary));
     border-radius: 5px;
     max-width: 100%;
 }
@@ -17,14 +17,13 @@
     position: relative;
     top: -30px;
     overflow: visible;
-}
+}  
 
 .slideTitle span {
     font-size: larger;
     font-weight: bold;
     color: rgb(var(--accent-font));
-    background-color: rgb(var(--accent));
+    background: linear-gradient(90deg, rgb(var(--secondary)), rgb(var(--accent)));
     padding: 0 10px;
     border-radius: 20px;
-    border: 2px solid rgb(var(--foreground));
 }

@@ -3,7 +3,8 @@
   --foreground: 23, 23, 23;
   --accent: 178, 241, 29;
   --accent-font: 0, 0, 0;
-  
+  --secondary: 0, 221, 215;
+  --secondary-font: 0, 0, 0;
 }
 
 [data-theme='dark'] {
@@ -58,10 +59,8 @@ footer {
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  background-image: radial-gradient(
-    rgb(var(--background)) 2px,
-    rgba(0, 0, 0, 0) 2px
-  );
+  background-image: radial-gradient(rgb(var(--background)) 2px,
+      rgba(0, 0, 0, 0) 2px);
   background-size: 4px 4px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -95,7 +94,7 @@ code {
 }
 
 code:hover {
-  background-color: rgb(var(--accent));
+  background: rgb(var(--accent));
   transition: background-color 0.5s;
 }
 
@@ -144,7 +143,7 @@ section {
   perspective: 500px;
 }
 
-section > div {
+section>div {
   width: 600px;
   min-height: fit-content;
   max-height: calc(100vh - 180px);
@@ -156,7 +155,7 @@ section > div {
   background-color: rgba(var(--background), 0.7);
 }
 
-section > h2 {
+section>h2 {
   margin: 0;
   color: rgb(var(--foreground));
   left: calc(50% + 380px);
@@ -169,7 +168,7 @@ section > h2 {
   text-orientation: mixed;
 }
 
-section > h3 {
+section>h3 {
   display: none;
   position: relative;
   color: rgb(var(--foreground));
@@ -180,14 +179,14 @@ section > h3 {
 }
 
 @media only screen and (max-width: 920px) {
-  section > h2 {
+  section>h2 {
     left: unset;
     right: 20px;
   }
 }
 
 @media only screen and (max-width: 810px) {
-  section > div {
+  section>div {
     margin-right: 110px;
     overflow: scroll;
   }
@@ -200,15 +199,15 @@ section > h3 {
     height: fit-content;
   }
 
-  section > h2 {
+  section>h2 {
     display: none;
   }
 
-  section > h3 {
+  section>h3 {
     display: block;
   }
 
-  section > div {
+  section>div {
     width: 95vw;
     margin: 10px auto;
   }
@@ -221,7 +220,7 @@ section > h3 {
 @media screen and (max-width: 480px) {
   .container {
     margin-top: 80px;
-  } 
+  }
 }
 
 .mainPage {
@@ -233,17 +232,16 @@ section > h3 {
   .mainPage {
     max-width: 100%;
     margin: 0;
-  } 
+  }
 }
 
 .title {
-  background-color: rgb(var(--accent));
-  color: rgb(var(--accent-font));
-  padding: .25em 1em;
-  border-radius: 5px;
+  background: linear-gradient(90deg, rgb(var(--secondary)), rgb(var(--accent)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   width: fit-content;
   margin: 1em auto;
-  border: 2px solid rgb(var(--foreground));
 }
 
 .progress {
