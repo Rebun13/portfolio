@@ -26,7 +26,7 @@ export default function RootLayout({
             <Navbar />
             <ThemeToggle />
             {children}
-            <Footer title={`Rubén Gómez Dopazo @ ${new Date().getFullYear()}`} />
+            <Footer title={`Rubafa n Gafa mez Dopazo @ ${new Date().getFullYear()}`} />
           </div>
         </ThemeProvider>
       </body>
