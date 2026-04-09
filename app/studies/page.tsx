@@ -15,10 +15,10 @@ export default function Studies() {
         restDelta: 0.001
     });
     return (
-        <>
+        <div className="mainPage">
             <h1 className="title">Studies</h1>
             <Timeline items={items} />
             <motion.div className="progress" style={{ scaleX: scaleX }} />
-        </>
+        </div>
     )
 }

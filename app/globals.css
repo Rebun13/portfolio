@@ -1,15 +1,17 @@
 :root {
-  --background: 256, 256, 256;
+  --background: 200, 200, 210;
   --foreground: 23, 23, 23;
-  --accent: 178, 241, 29;
+  --accent: 147, 200, 24;
   --accent-font: 0, 0, 0;
-  --secondary: 0, 221, 215;
+  --secondary: 5, 163, 158;
   --secondary-font: 0, 0, 0;
 }
 
 [data-theme='dark'] {
-  --background: 10, 10, 10;
+  --background: 60, 60, 60;
   --foreground: 237, 237, 237;
+  --accent: 178, 241, 29;
+  --secondary: 0, 221, 215;
 }
 
 @font-face {
@@ -81,6 +83,23 @@ footer::before {
   opacity: 0.2;
 }
 
+.footerTag {
+  font-family: input-mono, monospace;
+  font-weight: 600;
+  font-style: normal;
+  background-color: rgb(var(--foreground));
+  color: rgb(var(--background));
+  border-radius: 5px;
+  padding: 5px 5px;
+  transition: background-color 0.5s;
+  white-space: nowrap;
+}
+
+.footerTag:hover {
+  background: rgb(var(--accent));
+  transition: background-color 0.5s;
+}
+
 code {
   font-family: input-mono, monospace;
   font-weight: 600;
@@ -95,6 +114,7 @@ code {
 
 code:hover {
   background: rgb(var(--accent));
+  color: rgb(var(--accent-font));
   transition: background-color 0.5s;
 }
 
@@ -117,21 +137,6 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-.wallpaper {
-  background-image: url("/portfolio/tile.jpg");
-  background-repeat: repeat;
-  background-size: 300px 300px;
-  opacity: 0.2;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  pointer-events: none;
-}
 
 section {
   height: 100vh;
@@ -224,14 +229,14 @@ section>h3 {
 }
 
 .mainPage {
-  margin: 0 auto;
+  margin: 0 100px 0 300px;
   max-width: 90%;
 }
 
 @media screen and (max-width: 768px) {
   .mainPage {
     max-width: 100%;
-    margin: 0;
+    margin: 0 50px 0 50px;
   }
 }
 
@@ -241,7 +246,7 @@ section>h3 {
   background-clip: text;
   color: transparent;
   width: fit-content;
-  margin: 1em auto;
+  margin: 1em auto 1em 0;
 }
 
 .progress {

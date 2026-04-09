@@ -1,7 +1,7 @@
 export function Footer({ title = "" }) {
     return (
         <footer>
-            <code>{title}</code>
+            <div className="footerTag">{title}</div>
         </footer>
     );
 }

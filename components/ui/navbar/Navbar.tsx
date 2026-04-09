@@ -3,9 +3,10 @@
 import { accentFont } from "@/components/fonts/fonts";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Logo } from "@/components/ui/logos/Logos";
+import { ThemeToggle } from "@/components/ui/theme/ThemeToggle";
 import styles from "./styles.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { ChevronDoubleRightIcon, ChevronDoubleLeftIcon } from '@heroicons/react/24/solid'
 
 interface Element {
     label: string
@@ -13,23 +14,20 @@ interface Element {
 }
 
 export function Navbar() {
-    const [isHovered, setIsHovered] = useState(false);
-    const ref = useRef<HTMLDivElement>(null);
+    const [toggleNavbar, setToggleNavbar] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => setIsLoading(false), []);
 
-    useEffect(() => {
-        const handleClick = (event: MouseEvent) => {
-        if (ref.current && !ref.current.contains(event.target as Node)) {
-            setIsHovered(false);
-        }
-        };
-
-        document.addEventListener("click", handleClick, true);
-
-        return () => {
-        document.removeEventListener("click", handleClick, true);
-        };
-    }, [ref, isHovered]);
-
+    const handleToggle = () => {
+        setToggleNavbar(!toggleNavbar);
+    }
+    let iconToRender;
+    if (toggleNavbar) {
+        iconToRender = <ChevronDoubleLeftIcon className={styles.toggleIcon}/>;
+    } else {
+        iconToRender = <ChevronDoubleRightIcon className={styles.toggleIcon}/>
+    }
+    
     const pathname = usePathname()
     const links: Element[] = [
         {
@@ -49,15 +47,13 @@ export function Navbar() {
             "path": "/projects",
         },
     ]
-
+    if (isLoading) return <></>
     return (
         <div
-            className={`${accentFont.className} ${styles.navbar} ${isHovered ? styles.active : ""}`}
-            onClick={() => setIsHovered(!isHovered)}
-            onBlur={() => setIsHovered(false)}
-            ref={ref}
+            className={`${accentFont.className} ${styles.navbar} ${toggleNavbar ? styles.active : ""}`}
         >
-            <Logo />
+            <button className={`${styles.navbarToggle} ${toggleNavbar ? styles.active : ""}`} onClick={() => handleToggle()}>{iconToRender}</button>
+            <ThemeToggle />
             {links.map((link: Element) =>
                 <Link href={link.path} key={link.label}>
                     <h3

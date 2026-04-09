@@ -1,52 +1,68 @@
 .navbar {
-    border: none;
     position: fixed;
-    top: 10px;
-    left: 10px;
-    height: 40px;
-    width: 40px;
+    top: 3vh;
+    left: 0;
+    height: 68vh;
+    width: 200px;
     display: flex;
     justify-content: flex-start;
     align-items: start;
     flex-direction: column;
-    padding: 10px;
-    background-image: radial-gradient(rgb(var(--background)) 2px,
-            rgba(0, 0, 0, 0) 2px);
+    padding: 100px 10px;
     white-space: nowrap;
-    border-radius: 10px;
     gap: 40px;
-    background-size: 4px 4px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    -moz-backdrop-filter: blur(3px);
-    font-size: 14px;
-    line-height: 14px;
-    z-index: 200;
-    overflow: hidden;
-    transition: height .25s ease, width .25s ease;
+    border-top: 2px solid rgb(var(--secondary));
+    border-right: 2px solid rgb(var(--secondary));
+    border-bottom: 2px solid rgb(var(--secondary));
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(var(--background));
+    z-index: 80;
+}
+
+.navbarToggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbarToggle {
+        display: block;
+        position: fixed;
+        padding: 5px;
+        left: 2px;
+        top: 40px;
+        height: 30px;
+        width: 30px;
+        border: none;
+        border-radius: 0 6px 6px 0;
+        background-color: rgb(var(--secondary));
+        color: rgb(var(--background));
+        transition: left 0.5s ease-in-out;
+    }
+
+    .navbarToggle.active {
+        left: 222px;
+        transition: left 0.5s ease-in-out;
+    }
+
+    .navbar {
+        left: -200px;
+        padding: 100px 0;
+        transition: width 0.5s;
+        transition: left 0.5s ease-in-out;
+    }
+
+    .navbar.active {
+        left: 0;
+        max-width: 100%;
+        border-right: 2px solid rgb(var(--secondary));
+        padding: 100px 10px;
+        transition: left 0.5s ease-in-out, padding 0.5s ease-in-out;
+    }
 }
 
 .navbar a {
     text-decoration: none;
     color: rgb(var(--foreground));
-}
-
-.navbar.active {
-    height: 300px;
-    width: 200px;
-    transition: height .25s ease, width .25s ease;
-}
-
-.navbar::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: rgb(var(--accent));
-    opacity: 0.2;
 }
 
 .navbarItem {
@@ -59,7 +75,10 @@
 }
 
 .navbarItem:hover:not(.active) {
-    font-size: 17px;
-    color: rgb(var(--accent));
-    transition: font-size .25s ease;
+    color: rgb(var(--secondary));
+}
+
+.toggleIcon {
+    width: 20px;
+    height: 20px;
 }

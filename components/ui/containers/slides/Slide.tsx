@@ -9,7 +9,7 @@ export function Slide({ title, content }: Readonly<{ title: string | null, conte
         <div className={styles.slide}>
             { title? <div className={styles.slideTitle}><span>{title}</span></div> : <></>}
             <div className={styles.slideContent}>
-                {content.map((paragraph) => <div key={uuid()} className={styles.slidetext}><Markdown >{paragraph}</Markdown ></div>)}
+                {content.map((paragraph) => <div key={uuid()} className={styles.slideText}><Markdown >{paragraph}</Markdown ></div>)}
             </div>
         </div>
     );
