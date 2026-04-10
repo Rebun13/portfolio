@@ -1,15 +1,14 @@
 .tableWrapper {
-    margin: 0 auto;
     display: flex;
     max-width: 90%;
     overflow-y: scroll;
-    max-height: 260px;
+    max-height: 60vh;
     border: 2px solid rgb(var(--foreground));
     border-radius: 5px;
 }
 
 .tableSkeleton {
-    margin: 0 auto;
+    margin: 0;
     max-width: 90%;
 }
 
@@ -38,7 +37,7 @@
 }
 
 .trow {
-    border-bottom:1px solid rgba(var(--foreground), .2);
+    border-bottom: 1px solid rgba(var(--foreground), .2);
 }
 
 .trow td {
@@ -75,4 +74,22 @@
 
 .topic.selected {
     border: 2px solid rgb(var(--foreground));
+}
+
+.headerIcon {
+    height: 18px;
+    width: 18px;
+}
+
+.hideButton {
+    height: 20px;
+    display: inline flex;
+    background-color: rgba(var(--foreground), 1);
+    color: rgb(var(--background));
+    border: none;
+    border-radius: 8px;
+}
+
+.hideButton:hover {
+    background-color: rgba(var(--foreground), .7);
 }

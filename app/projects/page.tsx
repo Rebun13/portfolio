@@ -16,6 +16,7 @@ export default function Studies() {
     return (
         <div className="mainPage">
             <h1 className="title">Projects</h1>
+            <p>Here are my github projects.</p>
             <Repos />
             <motion.div className="progress" style={{ scaleX: scaleX }} />
         </div>

@@ -12,6 +12,11 @@ export default function Repos() {
     const [response, setResponse] = useState<Array<GithubRepository>>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
+    const [trainingHidden, setTrainingHidden] = useState<boolean>(true);
+    const toggleHide = (e: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
+        setTrainingHidden(e.target.checked);
+    }
+
     const [filterBy, setFilterBy] = useState<string | null>(null);
     const filterRepos = (topic: string) => {
         if (filterBy === topic) {
@@ -48,39 +53,52 @@ export default function Repos() {
     if (!response) return <p>Could not fetch my projects 🤔</p>;
 
     return (
-        <div className={styles.tableWrapper}>
-            <table className={styles.table}>
-                <thead className={styles.thead}>
-                    <tr>
-                        <th>Repo</th>
-                        <th>Language</th>
-                        <th>Description</th>
-                        <th>Tags</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {response.map((repo) => {
-                        if (filterBy !== null && !repo.topics?.includes(filterBy)) return <></>;
-                        return (
-                            <tr key={repo.id} className={styles.trow}>
-                                <td>
-                                    <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                                        {repo.name}
-                                    </a>
-                                </td>
-                                <td>{repo.language}</td>
-                                <td>{repo.description}</td>
-                                <td>{repo.topics?.map((topic) => (
-                                    <button
-                                        key={uuid()}
-                                        className={topic === filterBy ? `${styles.topic} ${styles.selected}` : styles.topic}
-                                        onClick={() => filterRepos(topic)}
-                                    >{topic}</button>))}
-                                </td>
-                            </tr>)
-                    })}
-                </tbody>
-            </table>
-        </div>
+        <>
+            <div style={{ marginBottom: '15px' }}>
+                <label>
+                    <input
+                        type="checkbox"
+                        checked={trainingHidden}
+                        onChange={toggleHide}
+                    />
+                    Hide training projects
+                </label>
+            </div>
+            <div className={styles.tableWrapper}>
+                <table className={styles.table}>
+                    <thead className={styles.thead}>
+                        <tr>
+                            <th>Repo</th>
+                            <th>Language</th>
+                            <th>Description</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {response.map((repo) => {
+                            if (trainingHidden && repo.topics?.includes("training")) return <></>
+                            if (filterBy !== null && !repo.topics?.includes(filterBy)) return <></>;
+                            return (
+                                <tr key={repo.id} className={styles.trow}>
+                                    <td>
+                                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                                            {repo.name}
+                                        </a>
+                                    </td>
+                                    <td>{repo.language}</td>
+                                    <td>{repo.description}</td>
+                                    <td>{repo.topics?.map((topic) => (
+                                        <button
+                                            key={uuid()}
+                                            className={topic === filterBy ? `${styles.topic} ${styles.selected}` : styles.topic}
+                                            onClick={() => filterRepos(topic)}
+                                        >{topic}</button>))}
+                                    </td>
+                                </tr>)
+                        })}
+                    </tbody>
+                </table>
+            </div>
+        </>
     );
 }
